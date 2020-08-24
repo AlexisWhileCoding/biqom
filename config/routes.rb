@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'user_challenges/index'
+  get 'user_challenges/edit'
+  get 'plannings/my_activities'
+  get 'activities/index'
+  get 'activities/show'
   devise_for :users
   root to: 'pages#home'
   get "dashboard", to: "pages#dashboard"
