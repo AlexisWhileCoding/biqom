@@ -1,1 +1,44 @@
 // Specific CSS for your home-page
+
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+  text-align: center;
+  font-size: 56px;
+}
+
+p {
+color: white;
+  text-shadow: 1px 1px 1px grey;
+  text-align: center;
+  font-size: 24px;
+}
+
+.btn-red {
+  color: white;
+  border: 1px solid rgb(255, 42, 42);
+  background-color: rgb(255, 42, 42);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+.btn-red:hover {
+  background-color: white;
+  color: rgb(255, 42, 42);
+  border: none;
+}
+
+.main-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.q{
+  color: rgb(255, 42, 42)
+}
+

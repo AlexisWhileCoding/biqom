@@ -1,2 +1,31 @@
-<h1>Activities#index</h1>
-<p>Find me in app/views/activities/index.html.erb</p>
+
+<h1>Activities</h1>
+
+  <div class="content">
+    <div class="cards">
+      <% @activities.each do |activity| %>
+        <div class="card" data-toggle="modal" data-target="#<%= "activity-#{activity.id}" %>" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path activity.photo.key, height: 300, width: 400, crop: :fill %>')">
+          <%= activity.name%>
+          </div>
+            <!-- Modal -->
+          <div class="modal fade" id="<%= "activity-#{activity.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path activity.photo.key, height: 300, width: 400, crop: :fill %>'); background-size: cover; background-position: center;">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLabel"><%= activity.name%></h2>
+                </div>
+                <div class="modal-body">
+                  <p><%= activity.description %></p>
+                  <p>Category: <%= activity.category%></p>
+                  <p>Number of days: <%= activity.days%></p>
+                </div>
+                <div class="modal-footer main-btn">
+                  <button type="button" class="btn btn-red">Add to my activities</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      <% end %>
+    </div>
+  </div>
