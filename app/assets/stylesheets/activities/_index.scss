@@ -1,1 +1,42 @@
+.modal-dialog {
+  max-width: 1000px;
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  bottom: 0;
+  left: 0;
+  z-index: 10040;
+  overflow: auto;
+  overflow-y: auto;
+}
 
+p {
+  font-size: 18px;
+  text-shadow: none;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+
+.modal-header {
+  border: none;
+  text-align: center;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.btn-red {
+  font-size: 18px;
+  margin-bottom: 25px;
+  
+}

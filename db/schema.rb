@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_124436) do
   create_table "activities", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "type"
+    t.string "category"
     t.integer "days"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
