@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_124436) do
     t.string "name"
     t.string "content"
     t.string "source"
+    t.string "source_type"
     t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,7 +61,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_124436) do
   create_table "plannings", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "activity_id", null: false
-    t.date "start_time"
+    t.time "start_time"
+    t.date "start_date"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -72,7 +74,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_124436) do
     t.bigint "planning_id", null: false
     t.bigint "challenge_id", null: false
     t.string "status"
-    t.date "start_date_time"
+    t.time "start_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["challenge_id"], name: "index_user_challenges_on_challenge_id"

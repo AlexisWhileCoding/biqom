@@ -4,7 +4,7 @@ class CreateUserChallenges < ActiveRecord::Migration[6.0]
       t.references :planning, null: false, foreign_key: true
       t.references :challenge, null: false, foreign_key: true
       t.string :status
-      t.date :start_date_time
+      t.time :start_time
 
       t.timestamps
     end

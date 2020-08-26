@@ -12,9 +12,16 @@ class PlanningsController < ApplicationController
     redirect_to my_activities_path
   end
 
+  def update
+    @planning = Planning.find(params[:id])
+    @planning.status = "Planned"
+    @planning.update(planning_params)
+    redirect_to my_activities_path
+  end
+
   private
 
   def planning_params
-    params.require(:plannings).permit(:start_time)
+    params.require(:planning).permit(:start_time, :start_date)
   end
 end
