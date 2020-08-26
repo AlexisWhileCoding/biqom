@@ -1,2 +1,13 @@
-<h1>Plannings#my_activities</h1>
-<p>Find me in app/views/plannings/my_activities.html.erb</p>
+<h1>My activities</h1>
+
+<div class="content">
+  <div class="cards">
+    <% @plannings.each do |planning| %>
+        <div class="card" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path planning.activity.photo.key, height: 300, width: 400, crop: :fill %>'); background-size: cover; background-position: center;">
+          <%= planning.activity.name %>
+          <%= planning.activity.description %>
+          <%= planning.status %>
+        </div>
+      <% end %>
+  </div>
+</div>

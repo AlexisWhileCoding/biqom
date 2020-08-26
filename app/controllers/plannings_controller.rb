@@ -1,11 +1,14 @@
 class PlanningsController < ApplicationController
   def my_activities
-    @activities = Activity.all
+    @plannings = current_user.plannings
   end
 
   def create
-    @planning = Planning.new(planning_params)
-    @planning.save
+    @planning = Planning.new
+    @planning.user = current_user
+    @planning.activity_id = params[:activity_id]
+    @planning.status = "Not started yet"
+    @planning.save!
     redirect_to my_activities_path
   end
 
