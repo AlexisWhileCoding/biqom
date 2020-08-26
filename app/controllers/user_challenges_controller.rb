@@ -1,6 +1,14 @@
 class UserChallengesController < ApplicationController
   def index
-    @user_challenges = UserChallenge.all
+    @user_challenges = []
+    current_user.plannings.each do |planning|
+      next unless planning.start_date >= Date.today && (planning.start_date + planning.activity.days) < Date.today 
+      position = (Date.today - planning.start_date).days
+      challenge =  planning.activity.challenges.find_by(position: position)
+      @user_challenges << current_user.user_challenges.find_by(challenge: challenge)
+    end
+
+    @user_challenges
   end
 
   def edit
