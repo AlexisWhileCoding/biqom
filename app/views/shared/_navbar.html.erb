@@ -2,7 +2,7 @@
 
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-3 <%= 'fixed-top' if current_page?(root_path)  %>" style="<%= 'background: transparent;' if current_page?(root_path) %>, padding: 0; margin: 0;" >
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path , class: "navbar-brand" do %>
     <%= image_tag "logo-biqom.png", class: "logo" %>
     <% end %>
 
@@ -30,7 +30,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+         <button type="button" class="btn-log"> <%= link_to "Login", new_user_session_path, class: "nav-link" %></button>
         </li>
       <% end %>
     </ul>
