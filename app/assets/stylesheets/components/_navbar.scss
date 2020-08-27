@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,4 +14,11 @@ img{
   height: 100px
 }
 
+.logo:hover {
+opacity: 0.6
+}
+
+.logo{
+  height: 70px
+}
 
