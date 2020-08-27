@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  patch "user_challenge/:id/validate", to: "user_challenges#validate", as: :validate_user_challenge
   get 'user_challenges/index'
   get 'user_challenges/edit'
   get 'plannings/my_activities'
