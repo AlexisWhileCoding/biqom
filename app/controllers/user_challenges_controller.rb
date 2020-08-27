@@ -1,6 +1,13 @@
 class UserChallengesController < ApplicationController
   def index
-    @user_challenges = UserChallenge.all
+    @user_challenges = []
+
+    current_user.plannings.each do |planning|
+      next unless planning.start_date >= Date.today && Date.today < (planning.start_date + planning.activity.days)
+      position = (Date.today - planning.start_date).days.to_i
+      challenge =  planning.activity.challenges.find_by(position: position)
+      @user_challenges << current_user.user_challenges.find_by(challenge: challenge)
+    end
   end
 
   def edit
@@ -14,6 +21,12 @@ class UserChallengesController < ApplicationController
     redirect_to user_challenges_path
   end
 
+  def validate
+    @user_challenge = UserChallenge.find(params[:id])
+    @user_challenge.update!(status: params[:commit])
+    redirect_to user_challenges_path
+  end
+
   def create
     @user_challenge = UserChallenge.new(user_challenge_params)
     @user_challenge.status = "Not completed"
@@ -24,7 +37,7 @@ class UserChallengesController < ApplicationController
   private
 
   def user_challenge_params
-    params.require(:user_challenge).permit(:start_date_time)
+    params.require(:user_challenge).permit(:start_time, :status)
   end
 
 end

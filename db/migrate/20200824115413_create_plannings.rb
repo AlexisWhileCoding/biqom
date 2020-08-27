@@ -3,7 +3,8 @@ class CreatePlannings < ActiveRecord::Migration[6.0]
     create_table :plannings do |t|
       t.references :user, null: false, foreign_key: true
       t.references :activity, null: false, foreign_key: true
-      t.date :start_time
+      t.time :start_time
+      t.date :start_date
       t.string :status
 
       t.timestamps

@@ -1,2 +1,40 @@
-<h1>UserChallenges#index</h1>
-<p>Find me in app/views/user_challenges/index.html.erb</p>
+<h1 class="black-text">Today's challenges!</h1>
+
+<div class="cards-div w-75">
+  <% @user_challenges.each do |user_challenge| %>
+      <div class="card-product mb-3">
+        <%= cl_image_tag user_challenge.planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-product-infos" data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
+          <h4><%= user_challenge.challenge.name %></h4>
+          <% if user_challenge.status == "Completed" %>
+            <%= user_challenge.status %>
+          <% elsif user_challenge.status == "Not completed" %>
+            <%= simple_form_for(user_challenge, url: validate_user_challenge_path(user_challenge), html: {method: :patch}) do |f| %>
+              <%= f.button :submit , value: "Completed", class: "btn btn-red"%>
+            <% end %>
+          <% end %>
+          <div>
+        </div>
+          <div class="modal fade" id="<%= "activity-#{user_challenge.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="vertical-alignment-helper">
+              <div class="modal-dialog  modal-height-width vertical-align-center" role="document">
+                <div class="modal-content  modal-height-width">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body">
+                    <% if user_challenge.challenge.content.include? "youtube" %>
+                      <iframe width="1100" height="650" src=<%= user_challenge.challenge.content%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <% else %>
+                      <h2><%= user_challenge.challenge.name %> - <%= user_challenge.challenge.content %> - <%= user_challenge.start_time %> - <%= user_challenge.id %></h2>
+                    <% end %>
+                  </div>
+                  <div class="modal-footer main-btn">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>

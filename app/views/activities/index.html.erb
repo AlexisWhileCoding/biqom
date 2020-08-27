@@ -1,5 +1,5 @@
 
-<h1>Activities</h1>
+<h1 style= "color: white">choose an activity</h1>
 
   <div class="content">
     <div class="cards">
@@ -20,12 +20,19 @@
                   <p>Number of days: <%= activity.days%></p>
                 </div>
                 <div class="modal-footer main-btn">
-                  <button type="button" class="btn btn-red">Add to my activities</button>
+                  <% if current_user.activities.include?(activity) %>
+                   <button class="btn btn-red-activities">Activity already selected</button> 
+                  <% else %>
+                    <%= link_to "Add to my activities",
+                    activity_plannings_path(activity),
+                    method: :post,
+                    class:"btn btn-red-activities"%>
+                  <% end %>
                 </div>
               </div>
             </div>
           </div>
-        
       <% end %>
     </div>
   </div>
+

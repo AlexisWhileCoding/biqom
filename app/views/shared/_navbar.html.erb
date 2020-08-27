@@ -2,13 +2,26 @@
 
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-3 <%= 'fixed-top' if current_page?(root_path)  %>" style="<%= 'background: transparent;' if current_page?(root_path) %>, padding: 0; margin: 0;" >
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "logo-biqom.png", class: "logo" %>
+  <%= link_to root_path , class: "navbar-brand" do %>
+    <%= image_tag "logo-biqom.png" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+<% unless current_page?(root_path) %>
+  <div class="container d-inline-flex justify-content-around">
+    <%= link_to activities_path , class: "navbar-brand" do %>
+    <%= image_tag "activities.png", class: "logo" %>
+    <% end %>
+    <%= link_to my_activities_path , class: "navbar-brand" do %>
+    <%= image_tag "my-activities.png", class: "logo" %>
+    <% end %>
+    <%= link_to user_challenges_path , class: "navbar-brand" do %>
+    <%= image_tag "my-challenges.png", class: "logo" %>
+    <% end  %>
+  </div>
+<% end %>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,7 +43,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+         <button type="button" class="btn-log"> <%= link_to "Login", new_user_session_path, class: "nav-link" %></button>
         </li>
       <% end %>
     </ul>

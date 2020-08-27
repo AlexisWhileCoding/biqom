@@ -1,5 +1,5 @@
 .modal-dialog {
-  max-width: 1000px;
+  max-width: 1300px;
   position: absolute;
   top: 200px;
   right: 30px;
@@ -8,6 +8,15 @@
   z-index: 10040;
   overflow: auto;
   overflow-y: auto;
+}
+
+.modal-height-width {
+  width: 1200px;
+  height: 700px;
+}
+
+.content-height-modal {
+  height: 1500px;
 }
 
 p {
@@ -26,6 +35,28 @@ p {
   margin-bottom: 15px;
 }
 
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  pointer-events:none;
+}
+.vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+// .modal-content {
+//   /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+//   width:inherit;
+// max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+//   height:inherit;
+//   /* To center horizontally */
+//   margin: 0 auto;
+//   pointer-events:all;
+// }
+
 .modal-header {
   border: none;
   text-align: center;
@@ -35,8 +66,20 @@ p {
   border: none;
 }
 
-.btn-red {
+.btn-red-activities {
+  color: white;
+  border: 1px solid rgb(255, 42, 42);
+  background-color: rgb(255, 42, 42);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
   font-size: 18px;
   margin-bottom: 25px;
-  
+  text-decoration: none;
+}
+
+body{
+  background-color: #F4F4F4;
 }
