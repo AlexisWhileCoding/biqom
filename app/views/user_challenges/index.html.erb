@@ -1,2 +1,30 @@
-<h1>UserChallenges#index</h1>
-<p>Find me in app/views/user_challenges/index.html.erb</p>
+<h1 class="black-text">Today's challenges!</h1>
+
+<div class="cards-div w-75">
+  <% @user_challenges.each do |user_challenge| %>
+      <div class="card-product mb-3">
+        <%= cl_image_tag user_challenge.planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-product-infos" data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
+          <h3><%= user_challenge.challenge.name %></h3>
+          <div class="modal fade" id="<%= "activity-#{user_challenge.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="modal-dialog  modal-height-width" role="document">
+              <div class="modal-content  modal-height-width">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                  <% if user_challenge.challenge.content.include? "youtube" %>
+                    <iframe width="900" height="350" src=<%= user_challenge.challenge.content%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <% else %>
+                    <h2><%= user_challenge.challenge.name %> - <%= user_challenge.challenge.content %> - <%= user_challenge.start_time %> - <%= user_challenge.id %></h2>
+                  <% end %>
+                </div>
+                <div class="modal-footer main-btn">
+                  <button class="btn btn-red">Done!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>

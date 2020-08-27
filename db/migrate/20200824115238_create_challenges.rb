@@ -6,6 +6,7 @@ class CreateChallenges < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :content
       t.string :source
+      t.string :source_type
       t.integer :position
 
       t.timestamps

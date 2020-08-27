@@ -1,5 +1,5 @@
 .modal-dialog {
-  max-width: 1000px;
+  max-width: 1300px;
   position: absolute;
   top: 200px;
   right: 30px;
@@ -8,6 +8,15 @@
   z-index: 10040;
   overflow: auto;
   overflow-y: auto;
+}
+
+.modal-height-width {
+  width: 1200px;
+  height: 700px;
+}
+
+.content-height-modal {
+  height: 1500px;
 }
 
 p {
@@ -38,5 +47,12 @@ p {
 .btn-red {
   font-size: 18px;
   margin-bottom: 25px;
-  
+  text-decoration: none;
+  color: white;
+}
+
+body{
+  background-color: #F4F4F4;
+
+
 }
