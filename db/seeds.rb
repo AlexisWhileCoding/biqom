@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-challenge = Challenge.create(name: "Sun salutation", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube: Well+Good", source_type: "Video", duration: 4, position: 0, activity_id: 19)
+challenge = Challenge.create(name: "One chapter", content: "Read one chapter or the first chapter of a book you chose", source: "Biqom", source_type: "Text", duration: 30, position: 0, activity_id: 20)
