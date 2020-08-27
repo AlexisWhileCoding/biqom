@@ -5,7 +5,7 @@ h1 {
   color: white;
   text-shadow: 1px 1px 1px grey;
   text-align: center;
-  font-size: 56px;
+  font-size: 100px;
 }
 
 p {
@@ -14,6 +14,7 @@ color: white;
   text-align: center;
   font-size: 24px;
 }
+
 
 .btn-red {
   color: white;
@@ -24,7 +25,19 @@ color: white;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  font-size: 24px;
+  font-size: 30px;
+}
+
+.btn-red-own-activities {
+  color: white;
+  border: 1px solid rgb(255, 42, 42);
+  background-color: rgb(255, 42, 42);
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
 }
 
 .btn-red:hover {
@@ -36,6 +49,7 @@ color: white;
 .main-btn{
   display: flex;
   justify-content: center;
+  font-size: 50px;
 }
 
 .q{
