@@ -46,6 +46,6 @@ file = URI.open('https://images.unsplash.com/photo-1542426144-3e6c375380e9?ixlib
 activity_9 = Activity.create(name: 'Write', description: "An fun activity to simple start writing. It can be a journal entry, a short story or anything else. We'll throw some fun challenges your way to change it up each time.", category: "Personal development", days: 15)
 activity_9.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
 
-challenge = Challenge.create(name: "Sun salutation", content: "https://www.youtube.com/watch?v=FPjppcOquE4&t", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
-challenge = Challenge.create(name: "Introduction - How to wake up early", content: "https://www.youtube.com/watch?v=XtDc_iJ-j-M", source: "Youtube", source_type: "Video", duration: 8, position: 0, activity: activity_5)
-challenge = Challenge.create(name: "One chapter", content: "https://www.youtube.com/watch?v=fm0WpJsWBA8", source: "Youtube", source_type: "Video", duration: 3, position: 0, activity: activity_8)
+challenge = Challenge.create(name: "Sun salutation", content: "www.youtube.com/watch?v=FPjppcOquE4&t", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
+challenge = Challenge.create(name: "Introduction - How to wake up early", content: "www.youtube.com/watch?v=XtDc_iJ-j-M", source: "Youtube", source_type: "Video", duration: 8, position: 0, activity: activity_5)
+challenge = Challenge.create(name: "One chapter", content: "www.youtube.com/watch?v=fm0WpJsWBA8", source: "Youtube", source_type: "Video", duration: 3, position: 0, activity: activity_8)
