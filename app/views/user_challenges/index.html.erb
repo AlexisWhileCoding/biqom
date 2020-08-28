@@ -1,6 +1,7 @@
 <h1 class="black-text">Today's challenges!</h1>
 
-<div class="cards-div w-75">
+<% if @user_challenges.any? %>
+  <div class="cards-div w-75">
   <% @user_challenges.each do |user_challenge| %>
       <div class="card-product mb-3">
         <%= cl_image_tag user_challenge.planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
@@ -40,3 +41,6 @@
       </div>
     <% end %>
 </div>
+<% else %>
+  <h2>No challenges!</h2>
+<% end %>
