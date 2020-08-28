@@ -8,28 +8,29 @@
           <h4><%= user_challenge.challenge.name %></h4>
           <% if user_challenge.status == "Completed" %>
             <%= user_challenge.status %>
-          <% elsif user_challenge.status == "Not completed" %>
-            <% url = validate_user_challenge_path(user_challenge) %>
-            <%= simple_form_for(user_challenge,  remote: true, url: url, html: {method: :patch}) do |f| %>
-              <%= f.button :submit , value: "Completed", class: "btn btn-red"%>
-            <% end %>
           <% end %>
         </div>
         <div>
           <div class="modal fade" id="<%= "activity-#{user_challenge.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="vertical-alignment-helper">
-              <div class="modal-dialog  modal-height-width vertical-align-center" role="document">
-                <div class="modal-content  modal-height-width">
+              <div class="modal-dialog challenge vertical-align-center" role="document">
+                <div class="modal-content">
                   <div class="modal-header">
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body d-flex justify-content-center">
                     <% if user_challenge.challenge.content.include? "youtube" %>
-                      <iframe width="1100" height="650" src=<%= user_challenge.challenge.content%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe width="900" height="500" src=<%= user_challenge.challenge.content%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <% else %>
-                      <h2><%= user_challenge.challenge.name %> - <%= user_challenge.challenge.content %> - <%= user_challenge.start_time %> - <%= user_challenge.id %></h2>
+                      <h2><%= user_challenge.challenge.content %></h2>
                     <% end %>
                   </div>
                   <div class="modal-footer main-btn">
+                    <% if user_challenge.status == "Not completed" %>
+                      <% url = validate_user_challenge_path(user_challenge) %>
+                      <%= simple_form_for(user_challenge,  remote: true, url: url, html: {method: :patch}) do |f| %>
+                        <%= f.button :submit , value: "Completed", class: "btn btn-red"%>
+                      <% end %>
+                    <% end %>
                   </div>
                 </div>
               </div>

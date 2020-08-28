@@ -6,8 +6,17 @@
   bottom: 0;
   left: 0;
   z-index: 10040;
-  overflow: auto;
-  overflow-y: auto;
+  // overflow: auto;
+  // overflow-y: auto;
+}
+
+.challenge {
+  max-width: 1300px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  bottom: 0;
+  left: 50px;
 }
 
 .modal-height-width {
