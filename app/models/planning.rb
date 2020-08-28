@@ -10,7 +10,8 @@ class Planning < ApplicationRecord
 
   def create_user_challenges
     activity.challenges.each do |challenge|
-      user_challenges.create(challenge: challenge, start_time: start_time)
+      status = "Not completed"
+      user_challenges.create(challenge: challenge, start_time: start_time, status: status)
     end
   end
 

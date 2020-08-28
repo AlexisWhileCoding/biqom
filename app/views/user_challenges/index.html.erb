@@ -4,12 +4,12 @@
   <% @user_challenges.each do |user_challenge| %>
       <div class="card-product mb-3">
         <%= cl_image_tag user_challenge.planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="card-product-infos" data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
-          <h4><%= user_challenge.challenge.name %></h4>
-          <% if user_challenge.status == "Completed" %>
-            <%= user_challenge.status %>
-          <% end %>
-        </div>
+          <div class="card-product-infos" data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
+            <h4><%= user_challenge.challenge.name %></h4>
+            <% if user_challenge.status == "Completed" %>
+              <%= user_challenge.status %>
+            <% end %>
+          </div>
         <div>
           <div class="modal fade" id="<%= "activity-#{user_challenge.id}" %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="vertical-alignment-helper">
@@ -40,3 +40,4 @@
       </div>
     <% end %>
 </div>
+
