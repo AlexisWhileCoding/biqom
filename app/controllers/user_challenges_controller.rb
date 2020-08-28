@@ -8,6 +8,7 @@ class UserChallengesController < ApplicationController
       challenge =  planning.activity.challenges.find_by(position: position)
       @user_challenges << current_user.user_challenges.find_by(challenge: challenge)
     end
+    @user_challenges.compact!
   end
 
   def edit

@@ -20,13 +20,15 @@
                   <p>Number of days: <%= activity.days%></p>
                 </div>
                 <div class="modal-footer main-btn">
-                  <% if current_user.activities.include?(activity) %>
-                   <button class="btn btn-red-activities">Activity already selected</button> 
-                  <% else %>
-                    <%= link_to "Add to my activities",
-                    activity_plannings_path(activity),
-                    method: :post,
-                    class:"btn btn-red-activities"%>
+                  <%if user_signed_in?  %>
+                    <% if current_user.activities.include?(activity) %>
+                     <button class="btn btn-red-activities">Activity already selected</button>
+                    <% else %>
+                      <%= link_to "Add to my activities",
+                      activity_plannings_path(activity),
+                      method: :post,
+                      class:"btn btn-red-activities"%>
+                    <% end %>
                   <% end %>
                 </div>
               </div>
