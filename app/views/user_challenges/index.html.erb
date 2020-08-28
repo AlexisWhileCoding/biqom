@@ -20,7 +20,7 @@
                   </div>
                   <div class="modal-body d-flex justify-content-center">
                     <% if user_challenge.challenge.content.include? "youtube" %>
-                      <iframe width="900" height="500" src=<%= user_challenge.challenge.content%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe width="900" height="500" src=<%= user_challenge.challenge.content %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <% else %>
                       <h2><%= user_challenge.challenge.content %></h2>
                     <% end %>
