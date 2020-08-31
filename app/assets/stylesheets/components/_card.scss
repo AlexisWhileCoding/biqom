@@ -15,16 +15,50 @@
 
 .card-product {
   overflow: hidden;
-  height: 400px;
+  height: 800px;
+  width: 400px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin: 20px;
+
+}
+
+.status{
+  background-color: rgba(255, 42, 42, 0.6);
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+h3{
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 10px;
+}
+h6{
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+.start-date{
+  border-top: 1px solid #E5E5E5;
+  padding-top: 10px;
+
 }
 
 .cards-div {
   margin: 0 auto;
   margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
 
 }
 
@@ -33,7 +67,7 @@
 }
 
 .card-product img {
-  height: 100%;
+  height: 400px;
   width: 400px;
   object-fit: cover;
 }
@@ -61,7 +95,3 @@
   margin-bottom: 20px;
 }
 
-.card.marge{
-
-  border-left: 1px solid black;
-}
