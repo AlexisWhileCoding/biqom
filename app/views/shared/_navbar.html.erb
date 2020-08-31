@@ -33,6 +33,13 @@
     <% end  %>
     <% end %>
     <% if user_signed_in? %>
+      <%= link_to user_challenges_dashboard_path , class: "navbar-brand" do %>
+        <% if current_page?(user_challenges_dashboard_path) %>
+      <%= image_tag "acrobate.png", class: "logo" %>
+      <% else %>
+      <%= image_tag "dashboard.png", class: "logo" %>
+      <% end %>
+      <% end %>
       <%= link_to destroy_user_session_path , method: :delete, class: "navbar-brand" do %>
       <%= image_tag "signout.png", class: "logo" %>
       <% end %>
@@ -44,6 +51,7 @@
       <%= image_tag "signup.png", class: "logo" %>
       <% end  %>
     <% end %>
+
   </div>
 <% end %>
 </div>
