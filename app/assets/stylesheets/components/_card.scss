@@ -25,6 +25,7 @@
 .cards-div {
   margin: 0 auto;
   margin-top: 25px;
+
 }
 
 .card-product-infos {
@@ -53,4 +54,14 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.card.marge{
+
+  border-left: 1px solid black;
 }
