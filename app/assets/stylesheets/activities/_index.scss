@@ -101,3 +101,40 @@ body{
   min-height: 100%;
 }
 }
+.challenge-dashboard {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 75px 75px 75px 75px 75px;
+  grid-gap: 10px;
+  align-content: center;
+}
+
+.challenge-box {
+  border-style: solid;
+  border-color: Red;
+  text-align: center;
+}
+
+
+.challenge-box-done {
+  border-style: solid;
+  border-color:green;
+  text-align: center;
+}
+
+.main-body {
+  text-align: center;
+}
+
+.activity-challenges {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.challenge-progression {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
