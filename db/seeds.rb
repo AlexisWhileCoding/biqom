@@ -47,7 +47,10 @@ file = URI.open('https://images.unsplash.com/photo-1542426144-3e6c375380e9?ixlib
 activity_9 = Activity.create(name: 'Write', description: "An fun activity to simple start writing. It can be a journal entry, a short story or anything else. We'll throw some fun challenges your way to change it up each time.", category: "Personal development", days: 15)
 activity_9.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
 
+file = URI.open('https://i.ytimg.com/an_webp/FPjppcOquE4/mqdefault_6s.webp?du=3000&sqp=CKqktPoF&rs=AOn4CLBi9-anE4BmlGduPPaARcLyHi4LIg')
 challenge = Challenge.create(name: "Sun salutation", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
+challenge.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
+
 challenge = Challenge.create(name: "Challenge 2", content: "Challenge 2", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
 challenge = Challenge.create(name: "Challenge 3", content: "Challenge 3", source: "Youtube", source_type: "Video", duration: 4, position: 2, activity: activity_1)
 challenge = Challenge.create(name: "Challenge 4", content: "Challenge 4", source: "Youtube", source_type: "Video", duration: 4, position: 3, activity: activity_1)
