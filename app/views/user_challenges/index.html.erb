@@ -3,8 +3,8 @@
 <% if @user_challenges.any? %>
   <div class="cards-div w-75">
   <% @user_challenges.each do |user_challenge| %>
-      <div class="card-product mb-3">
-        <%= cl_image_tag user_challenge.planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
+      <div class="card-product-challenges mb-3">
+        <%= cl_image_tag user_challenge.challenge.photo.key, height: 200, width: 200%>
           <div class="card-product-infos" data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
             <h4><%= user_challenge.challenge.name %></h4>
             <% if user_challenge.status == "Completed" %>
@@ -20,7 +20,7 @@
                   </div>
                   <div class="modal-body d-flex justify-content-center">
                     <% if user_challenge.challenge.content.include? "youtube" %>
-                      <iframe width="900" height="500" src=<%= user_challenge.challenge.content %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe width="900" height="500" src=<%= user_challenge.challenge.content %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay="1"></iframe>
                     <% else %>
                       <h2><%= user_challenge.challenge.content %></h2>
                     <% end %>
