@@ -5,10 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+UserChallenge.destroy_all
+Activity.destroy_all
+Challenge.destroy_all
 
-# Activity.destroy_all
-
-# require "open-uri"
+require "open-uri"
 # #
 file = URI.open('https://images.unsplash.com/photo-1573384666979-2b1e160d2d08?ixlib=rb-1.2.1&auto=format&fit=crop&w=1110&q=80')
 activity_1 = Activity.create(name: 'Yoga', description: "A 30-day beginners Yoga activity. Great way to get started and enjoy this popular activity", category: "Sports", days: 30)
@@ -47,5 +48,26 @@ activity_9 = Activity.create(name: 'Write', description: "An fun activity to sim
 activity_9.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
 
 challenge = Challenge.create(name: "Sun salutation", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
+challenge = Challenge.create(name: "Challenge 2", content: "Challenge 2", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
+challenge = Challenge.create(name: "Challenge 3", content: "Challenge 3", source: "Youtube", source_type: "Video", duration: 4, position: 2, activity: activity_1)
+challenge = Challenge.create(name: "Challenge 4", content: "Challenge 4", source: "Youtube", source_type: "Video", duration: 4, position: 3, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 2", source: "Youtube", source_type: "Video", duration: 4, position: 4, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 3", source: "Youtube", source_type: "Video", duration: 4, position: 5, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 4", source: "Youtube", source_type: "Video", duration: 4, position: 6, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 2", source: "Youtube", source_type: "Video", duration: 4, position: 7, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 3", source: "Youtube", source_type: "Video", duration: 4, position: 8, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 4", source: "Youtube", source_type: "Video", duration: 4, position: 9, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 2", source: "Youtube", source_type: "Video", duration: 4, position: 10, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 3", source: "Youtube", source_type: "Video", duration: 4, position: 11, activity: activity_1)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge 4", source: "Youtube", source_type: "Video", duration: 4, position: 12, activity: activity_1)
 challenge = Challenge.create(name: "Introduction - How to wake up early", content: "https://www.youtube.com/embed/XtDc_iJ-j-M", source: "Youtube", source_type: "Video", duration: 8, position: 0, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 1, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 2, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 3, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 4, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 5, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 6, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 7, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 8, activity: activity_5)
+challenge = Challenge.create(name: "Challenge X", content: "Challenge", source: "Youtube", source_type: "Video", duration: 8, position: 9, activity: activity_5)
 challenge = Challenge.create(name: "One chapter", content: "https://www.youtube.com/embed/fm0WpJsWBA8", source: "Youtube", source_type: "Video", duration: 3, position: 0, activity: activity_8)

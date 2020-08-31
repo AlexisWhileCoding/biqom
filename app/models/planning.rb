@@ -2,7 +2,7 @@ class Planning < ApplicationRecord
   belongs_to :user
   belongs_to :activity
 
-  has_many :user_challenges
+  has_many :user_challenges, dependent: :destroy
 
   after_create :create_user_challenges
 
