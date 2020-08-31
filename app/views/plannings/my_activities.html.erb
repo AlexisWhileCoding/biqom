@@ -1,7 +1,7 @@
 <h1>My activities</h1>
 
 <div class="cards-div w-75">
-  <% @plannings.each do |planning| %>
+  <% @plannings.each_with_index do |planning, index| %>
       <div class="card-product mb-3">
         <%= cl_image_tag planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
@@ -13,7 +13,9 @@
             <h5><%= planning.status %> from: <%= planning.start_date.strftime("%A, %d/%m/%Y") %> to: <%= (planning.start_date + planning.activity.days).strftime("%A, %d/%m/%Y") %> at: <%= planning.start_time.strftime("%k:%M") %></h5>
           <% end %>
           <%= simple_form_for [planning.activity, planning] do |f| %>
-            <%= f.input :start_date %>
+            <% #if planning.start_date > Date.today %>
+              <%= f.input :start_date, as: :string, input_html: {class: "datepicker"} %>
+            <% #end %>
             <%= f.input :start_time %>
             <%= f.submit class: "btn btn-red-own-activities" %>
           <% end %>  

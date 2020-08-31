@@ -27,11 +27,14 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { loadDynamicBannerText } from "./text-animation"
+// import { loadDynamicBannerText } from "./text-animation"
+import { initFlatPicker } from "../plugins/flatpickr"
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  loadDynamicBannerText();
+  initFlatPicker();
+  // loadDynamicBannerText();
    //document.querySelector("video").addEventListener('click', ()=> {
     //document.querySelector("video").play()
   //})
