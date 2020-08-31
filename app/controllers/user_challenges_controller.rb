@@ -11,6 +11,12 @@ class UserChallengesController < ApplicationController
     @user_challenges.compact!
   end
 
+  def dashboard
+    @user_challenges = UserChallenge.all
+    @plannings = Planning.all
+    #binding.pry
+  end
+
   def edit
     @user_challenge = UserChallenge.find(params[:id])
   end
