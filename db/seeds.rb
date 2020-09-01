@@ -48,7 +48,7 @@ activity_9 = Activity.create(name: 'Write', description: "An fun activity to sim
 activity_9.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
 
 file = URI.open('https://i.ytimg.com/an_webp/FPjppcOquE4/mqdefault_6s.webp?du=3000&sqp=CIDwt_oF&rs=AOn4CLAZBkeIdbYP5wbH3oX52IYiWokegw')
-challenge = Challenge.create(name: "Sun salutation", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
+challenge = Challenge.create(name: "Sun salutation", description: "Let's start with an easy first pose: the sun salutation ", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
 challenge.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
 
 challenge = Challenge.create(name: "Challenge 2", content: "Challenge 2", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
