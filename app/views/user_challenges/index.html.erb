@@ -1,14 +1,17 @@
 <h1 class="black-text">Today's challenges!</h1>
 
 <% if @user_challenges.any? %>
-  <div class="cards-div w-75">
+  <div class="cards-div w-75" >
   <% @user_challenges.each do |user_challenge| %>
-      <div class="card-product-challenges mb-3">
+      <div class="card-product-challenges mb-3"  data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
         <%= cl_image_tag user_challenge.challenge.photo.key, height: 200, width: 200%>
-          <div class="card-product-infos" data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
+          <div style="min-height: calc(65vh - 250px);" class="card-product-infos card-challenges" >
             <h4><%= user_challenge.challenge.name %></h4>
+            <h6><%= user_challenge.challenge.description %></h6>
             <% if user_challenge.status == "Completed" %>
               <%= user_challenge.status %>
+            <% else  %>
+              <h6>Not completed, let's do it!</h6>
             <% end %>
           </div>
         <div>
@@ -42,6 +45,9 @@
     <% end %>
 </div>
 <% else %>
-  <h2>No challenges!</h2>
+  <div class="status w-50 mx-auto mt-5" >
+  <h2 >Oops, no challenges today ! </h2>
+  <h2> Select an activity to "biqom" the new You !</h2>
+  </div>
 <% end %>
 
