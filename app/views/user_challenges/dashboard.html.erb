@@ -2,14 +2,16 @@
     <% @plannings.each do |planning| %>
         <div class="challenge-progression">
           <h2><%= planning.activity.name %></h2>
+          <p>from: <%= planning.start_date.strftime("%A, %d/%m/%Y") %> </p>
+          <p>to: <%= (planning.start_date + planning.activity.days).strftime("%A, %d/%m/%Y") %> </p>
           <div class="challenge-dashboard m-4">
             <% @user_challenges.order(:id).each do |user_challenge| %>
             <%#= user_challenge.challenge.position + 1%>
               <% if planning.activity.name == user_challenge.planning.activity.name %>
                 <% if user_challenge.status == "Completed"%>
-                  <div class="challenge-box-done">Day <%= user_challenge.challenge.position + 1 %></div>
+                  <div class="challenge-box-done btn btn-ghost">Day <%= user_challenge.challenge.position + 1 %></div>
                 <% else %>
-                  <div class="challenge-box">Day <%= user_challenge.challenge.position + 1 %></div>
+                  <div class="challenge-box btn btn-ghost">Day <%= user_challenge.challenge.position + 1 %></div>
                 <% end %>
               <% end %>
             <% end %>
