@@ -54,7 +54,11 @@ activity_9.photo.attach(io: file, filename: 'write.png', content_type: 'image/pn
 file = URI.open('https://i.ytimg.com/an_webp/FPjppcOquE4/mqdefault_6s.webp?du=3000&sqp=CIDwt_oF&rs=AOn4CLAZBkeIdbYP5wbH3oX52IYiWokegw')
 challenge = Challenge.create(name: "Sun salutation", description: "Let's start with an easy first pose: the sun salutation ", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
 challenge.photo.attach(io: file, filename: 'sun.png', content_type: 'image/png')
-challenge = Challenge.create(name: "Challenge 2", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
+
+file = URI.open('https://i.ytimg.com/an_webp/B1eF-Wl2AlU/mqdefault_6s.webp?du=3000&sqp=CJDNuPoF&rs=AOn4CLD4a5fdoecCizjmtFHDYZBvSHvl9Q')
+challenge = Challenge.create(name: "Moon salutation", content: "https://www.youtube.com/embed/B1eF-Wl2AlU", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
+challenge.photo.attach(io: file, filename: 'wakeup.png', content_type: 'image/png')
+
 challenge = Challenge.create(name: "Challenge 3", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 2, activity: activity_1)
 challenge = Challenge.create(name: "Challenge 4", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 3, activity: activity_1)
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 4, activity: activity_1)
