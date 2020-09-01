@@ -15,21 +15,21 @@
     <% if current_page?(activities_path)  %>
       <%= image_tag "cat-circle.png", class: "logo" %>
     <% else  %>
-      <%= image_tag "activities.png", class: "logo" %>
+      <%= image_tag "activities.png", class: "logo", id: "one" %>
     <% end %>
     <% end %>
     <%= link_to my_activities_path , class: "navbar-brand" do %>
     <% if current_page?(my_activities_path)  %>
       <%= image_tag "cat-umbrella.png", class: "logo" %>
     <% else  %>
-      <%= image_tag "my-activities.png", class: "logo" %>
+      <%= image_tag "my-activities.png", class: "logo" , id: "two"%>
     <% end %>
     <% end %>
     <%= link_to user_challenges_path , class: "navbar-brand" do %>
       <% if current_page?(user_challenges_path)  %>
       <%= image_tag "cat-dumb.png", class: "logo" %>
     <% else  %>
-    <%= image_tag "my-challenges.png", class: "logo" %>
+    <%= image_tag "my-challenges.png", class: "logo" , id: "three" %>
     <% end  %>
     <% end %>
     <% if user_signed_in? %>
@@ -37,18 +37,18 @@
         <% if current_page?(user_challenges_dashboard_path) %>
       <%= image_tag "acrobate.png", class: "logo" %>
       <% else %>
-      <%= image_tag "dashboard.png", class: "logo" %>
+      <%= image_tag "dashboard.png", class: "logo" , id: "four"%>
       <% end %>
       <% end %>
       <%= link_to destroy_user_session_path , method: :delete, class: "navbar-brand" do %>
-      <%= image_tag "signout.png", class: "logo" %>
+      <%= image_tag "signout.png", class: "logo" , id: "five" %>
       <% end %>
     <% else  %>
       <%= link_to new_user_session_path , class: "navbar-brand" do %>
-      <%= image_tag "signin.png", class: "logo" %>
+      <%= image_tag "signin.png", class: "logo" , id: "four"%>
       <% end %>
       <%= link_to new_user_registration_path , class: "navbar-brand" do %>
-      <%= image_tag "signup.png", class: "logo" %>
+      <%= image_tag "signup.png", class: "logo" , id: "five"%>
       <% end  %>
     <% end %>
 

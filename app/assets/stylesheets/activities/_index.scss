@@ -36,6 +36,7 @@ p {
 .modal-title {
   width: 100%;
   text-align: center;
+  color: white;
 }
 
 .modal-content {
@@ -122,19 +123,30 @@ h1{
   grid-template-columns: 75px 75px 75px 75px 75px;
   grid-gap: 10px;
   align-content: center;
+
+  padding: 10px;
 }
 
 .challenge-box {
+  color: #E5E5E5;
   border-style: solid;
-  border-color: Red;
   text-align: center;
+  border-color: #E5E5E5;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
 }
 
 
 .challenge-box-done {
+  color: #E5E5E5;
+  background-color: #439a86;
   border-style: solid;
-  border-color:green;
+  border-color: #439a86;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
 }
 
 .main-body {
@@ -152,4 +164,20 @@ h1{
   margin: 15px;
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 42, 42, 0.5);
+  border-radius: 5px;
+  padding-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
+
+.challenge-progression h2{
+color: #E5E5E5
+}
+
+.challenge-progression p{
+  padding: none;
+  margin: 0;
+  color: #E5E5E5;
+  }
+
