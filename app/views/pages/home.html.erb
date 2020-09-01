@@ -1,13 +1,13 @@
 <div id="bg-video">
   <%= video_tag("yoga.mp4",autoplay: true, muted: true, loop: true ) %>
 </div>
-<div class="container-fluid p-5" style=" height: 1100px; padding-top : 0; margin-bottom: : 0; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'sky.jpg' %>); background-size: cover">
+<div class="container-fluid p-5" style=" height: 100%; padding-top : 0; margin-bottom: : 0; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path 'sky.jpg' %>); background-size: cover">
 <div class="container" style= "margin-top: 200px">
 
   <div style="margin-bottom: 40px">
   </div>
 </div>
-<div class="main-btn sticky">
+<div class="main-btn" style="margin-top: 400px;">
   <%= link_to "biqom myself", activities_path, class: "btn btn-red" %>
 </div>
 
