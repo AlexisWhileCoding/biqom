@@ -196,14 +196,11 @@ color: #E5E5E5
 }
 #modal-opacity{
   background-color: rgba(255, 255, 255, 0.9);
-}
-.modal-content{
-   border-radius: 10px;
-    width: 1000px;
-
+  border-radius: 10px;
+   width: 1000px;
 }
 
-.modal-dialog{
+#dialog{
   display: flex;
     justify-content: center;
       height: 450px;
