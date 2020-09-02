@@ -9,9 +9,9 @@
             <%#= user_challenge.challenge.position + 1%>
               <% if planning.activity.name == user_challenge.planning.activity.name %>
                 <% if user_challenge.status == "Completed"%>
-                  <div class="challenge-box-done btn btn-ghost">Day <%= user_challenge.challenge.position + 1 %></div>
+                  <div class="challenge-box-done btn btn-ghost"><%= user_challenge.challenge.position + 1 %></div>
                 <% else %>
-                  <div class="challenge-box btn btn-ghost">Day <%= user_challenge.challenge.position + 1 %></div>
+                  <div class="challenge-box btn btn-ghost"><%= user_challenge.challenge.position + 1 %></div>
                 <% end %>
               <% end %>
             <% end %>
