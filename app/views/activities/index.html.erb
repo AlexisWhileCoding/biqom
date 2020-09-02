@@ -1,7 +1,65 @@
 
  <!--<h1 class="typewrite">.</h1>-->
+<div class="row">
+  <div id="question" class="col-1" data-toggle="modal" data-target="#exampleModal">
+    <%= image_tag "question.png", class: "logo", id: "two"%>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="modal-opacity">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+          <div class="carousel-inner"  id="how-to-height">
+            <div class="carousel-item active">
+              <h5>Step 1</h5>
+              <p>Click on any activity to see its details</p>
+              <p><%= image_tag "yoga.png"%></p>
+              <p>If you would like to add it to your activities click on </p>
+              <p><button class="btn btn-red-activities">Add to my activities</button></p>
+            </div>
+            <div class="carousel-item">
+            <h5>Step 2</h5>
+            <p>Once an activity has been selected you will find it in</p>
+            <p><%= image_tag "my-activities.png", class: "logo"%></p>
+            <p>You can then plan the date on which you want to start with the challenges as well as the time you want to do the challenge each day. Click on </p>
+            <p><button class= "btn btn-red-own-activities">Update Planning</button></p>
+            <p>to confirm your planning.</p>
+            </div>
+            <div class="carousel-item">
+              <h5>Step 3</h5>
+              <p>Once you’re planning is confirmed you will find the daily challenge for it on</p>.
+              <p><%= image_tag "my-challenges.png", class: "logo"%></p>
+              <p>Click on the challenge to show its content. Once you’ve completed the challenge, click on</p>
+              <p><button class= "btn btn-red-own-activities">Completed</button></p>
+              <p>The challenge will now be marked as “completed” in the “My challenges” tab.</p>
+            </div>
+            <div class="carousel-item">
 
-  <div class="content">
+              <h5>Step 4</h5>
+              <p>You can track your progress for each activity through your </p>.
+              <p><%= image_tag "dashboard.png", class: "logo"%></p>
+              <p>Each completed challenge will be marked in green</p>
+              <p><button class= "challenge-box-done">Day 1</button></p>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="content col-10">
     <div class="cards">
       <% @activities.each do |activity| %>
         <div class="card" data-toggle="modal" data-target="#<%= "activity-#{activity.id}" %>" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path activity.photo.key, height: 300, width: 400, crop: :fill %>')">
@@ -37,4 +95,5 @@
       <% end %>
     </div>
   </div>
-
+  <div class="col-1"></div>
+</div>
