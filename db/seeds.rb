@@ -16,19 +16,19 @@ activity_1 = Activity.create(name: 'Yoga', description: "A 30-day beginners Yoga
 activity_1.photo.attach(io: file, filename: 'yoga.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1519682577862-22b62b24e493?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
-activity_2 = Activity.create(name: 'Read more', description: "15-day activity to help you start or finish reading your book and keep reading others!", category: "Personal development", days: 15)
+activity_2 = Activity.create(name: 'Read more', description: "This activity will help you start or finish reading your book and keep reading others!", category: "Personal development", days: 30)
 activity_2.photo.attach(io: file, filename: 'reading.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1509833903111-9cb142f644e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1555&q=80')
-activity_3 = Activity.create(name: 'Start to run', description: "This activity will help you discover a love for running with an increase in distance with each challenge", category: "Sports", days: 5)
+activity_3 = Activity.create(name: 'Start to run', description: "This activity will help you discover a love for running with an increase in distance with each challenge", category: "Sports", days: 30)
 activity_3.photo.attach(io: file, filename: 'running.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
-activity_4 = Activity.create(name: 'Public speaking', description: "If you're nervous when you need to speak in front of a crowd, this activity will give you helpful tips and challenges to improve your skills!", category: "Lifestyle", days: 5)
+activity_4 = Activity.create(name: 'Public speaking', description: "If you're nervous when you need to speak in front of a crowd, this activity will give you helpful tips and challenges to improve your skills!", category: "Lifestyle", days: 30)
 activity_4.photo.attach(io: file, filename: 'speaking.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1422433555807-2559a27433bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
-activity_5 = Activity.create(name: 'Wake up!', description: "It's time to wake up! If you struggle in the morning use this activity and it's fun challenges to help you wake up sooner than usual.", category: "Lifestyle", days: 10)
+activity_5 = Activity.create(name: 'Wake up!', description: "It's time to wake up! If you struggle in the morning use this activity and it's fun challenges to help you wake up sooner than usual.", category: "Lifestyle", days: 30)
 activity_5.photo.attach(io: file, filename: 'sleep.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
@@ -36,7 +36,7 @@ activity_6 = Activity.create(name: 'Save your money', description: "You spend a 
 activity_6.photo.attach(io: file, filename: 'money.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1515847049296-a281d6401047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
-activity_7 = Activity.create(name: 'Organize it', description: "Get rid of clutter in different ways with this activity. A small step each day for you to feel better in your space.", category: "Home", days: 10)
+activity_7 = Activity.create(name: 'Organize it', description: "Get rid of clutter in different ways with this activity. A small step each day for you to feel better in your space.", category: "Home", days: 30)
 activity_7.photo.attach(io: file, filename: 'organize.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1517931524326-bdd55a541177?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
@@ -44,23 +44,29 @@ activity_8 = Activity.create(name: 'Rope skipping', description: "Skip the rope 
 activity_8.photo.attach(io: file, filename: 'rope.png', content_type: 'image/png')
 # #
 file = URI.open('https://images.unsplash.com/photo-1542426144-3e6c375380e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
-activity_9 = Activity.create(name: 'Write', description: "An fun activity to simple start writing. It can be a journal entry, a short story or anything else. We'll throw some fun challenges your way to change it up each time.", category: "Personal development", days: 15)
+activity_9 = Activity.create(name: 'Write', description: "An fun activity to simple start writing. It can be a journal entry, a short story or anything else. We'll throw some fun challenges your way to change it up each time.", category: "Personal development", days: 30)
 activity_9.photo.attach(io: file, filename: 'write.png', content_type: 'image/png')
 
 
 
 
 
-file = URI.open('https://i.ytimg.com/an_webp/FPjppcOquE4/mqdefault_6s.webp?du=3000&sqp=CIDwt_oF&rs=AOn4CLAZBkeIdbYP5wbH3oX52IYiWokegw')
-challenge = Challenge.create(name: "Sun salutation", description: "Let's start with an easy first pose: the sun salutation ", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
+file = URI.open('https://i.ytimg.com/an_webp/FPjppcOquE4/mqdefault_6s.webp?du=3000&sqp=CMbWvfoF&rs=AOn4CLCxAbi3r78gPcHVnFGchgmVPlpCnw')
+challenge = Challenge.create(name: "Sun salutation", description: "Let's start with an easy first pose: the sun salutation", content: "https://www.youtube.com/embed/FPjppcOquE4", source: "Youtube", source_type: "Video", duration: 4, position: 0, activity: activity_1)
 challenge.photo.attach(io: file, filename: 'sun.png', content_type: 'image/png')
 
-file = URI.open('https://i.ytimg.com/an_webp/B1eF-Wl2AlU/mqdefault_6s.webp?du=3000&sqp=CJDNuPoF&rs=AOn4CLD4a5fdoecCizjmtFHDYZBvSHvl9Q')
-challenge = Challenge.create(name: "Moon salutation", content: "https://www.youtube.com/embed/B1eF-Wl2AlU", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
+file = URI.open('https://i.ytimg.com/an_webp/cm08p5inPyw/mqdefault_6s.webp?du=3000&sqp=CJjbvfoF&rs=AOn4CLCOT0RVn4nwL_GqlrCQFHt4G9sBOA')
+challenge = Challenge.create(name: "Moon salutation", description: "Let's follow up on yesterday's challenge with a moon salutation!", content: "https://www.youtube.com/embed/cm08p5inPyw", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_1)
 challenge.photo.attach(io: file, filename: 'wakeup.png', content_type: 'image/png')
 
-challenge = Challenge.create(name: "Challenge 3", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 2, activity: activity_1)
-challenge = Challenge.create(name: "Challenge 4", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 3, activity: activity_1)
+file = URI.open('https://i.ytimg.com/an_webp/4pKly2JojMw/mqdefault_6s.webp?du=3000&sqp=CKTPvfoF&rs=AOn4CLBovw2vz5a0izV-N9Lt7MNEWxS-Nw')
+challenge = Challenge.create(name: "Full Body Stretch", content: "https://www.youtube.com/embed/4pKly2JojMw", description: "Let's do a short full workout today!", source: "Youtube", source_type: "Video", duration: 4, position: 2, activity: activity_1)
+challenge.photo.attach(io: file, filename: 'wakeup.png', content_type: 'image/png')
+
+file = URI.open('https://i.ytimg.com/an_webp/zBXMPRG8y08/mqdefault_6s.webp?du=3000&sqp=CInuvfoF&rs=AOn4CLAK75u9FavtpmIgUb2j5UDrx1NGhA')
+challenge = Challenge.create(name: "Today you can rest! ", content: "https://www.youtube.com/embed/zBXMPRG8y08", description: "Great job so far! Rest for today and enjoy these funny fails!", source: "Youtube", source_type: "Video", duration: 4, position: 3, activity: activity_1)
+challenge.photo.attach(io: file, filename: 'wakeup.png', content_type: 'image/png')
+
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 4, activity: activity_1)
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 5, activity: activity_1)
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 6, activity: activity_1)
@@ -91,7 +97,7 @@ challenge = Challenge.create(name: "Challenge X", content: "Challenge content", 
 
 
 
-file = URI.open('https://i.ytimg.com/an_webp/XtDc_iJ-j-M/mqdefault_6s.webp?du=3000&sqp=CJTZuPoF&rs=AOn4CLCdqHeMzVfcABQlWmqc50twLKhT5A')
+file = URI.open('https://i.ytimg.com/an_webp/XtDc_iJ-j-M/mqdefault_6s.webp?du=3000&sqp=CP_LvfoF&rs=AOn4CLDL0qy7zMnRbRO10c2vvYcJCZ4qcA')
 challenge = Challenge.create(name: "Introduction - How to wake up early", content: "https://www.youtube.com/embed/XtDc_iJ-j-M", source: "Youtube", source_type: "Video", duration: 8, position: 0, activity: activity_5)
 challenge.photo.attach(io: file, filename: 'wakeup.png', content_type: 'image/png')
 challenge = Challenge.create(name: "Challenge 2", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_5)
@@ -124,7 +130,7 @@ challenge = Challenge.create(name: "Challenge X", content: "Challenge content", 
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 28, activity: activity_5)
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 29, activity: activity_5)
 
-file = URI.open('https://i.ytimg.com/an_webp/fm0WpJsWBA8/mqdefault_6s.webp?du=3000&sqp=CJvuuPoF&rs=AOn4CLAaz8XgIROytyVYfzsbJF-V-bJCrQ')
+file = URI.open('https://i.ytimg.com/an_webp/fm0WpJsWBA8/mqdefault_6s.webp?du=3000&sqp=CI7RvfoF&rs=AOn4CLAbF-NNUdOzmx70BeBUG8JKVTiHDg')
 challenge = Challenge.create(name: "Start skipping!", content: "https://www.youtube.com/embed/fm0WpJsWBA8", source: "Youtube", source_type: "Video", duration: 3, position: 0, activity: activity_8)
 challenge.photo.attach(io: file, filename: 'roping.png', content_type: 'image/png')
 challenge = Challenge.create(name: "Challenge 2", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_8)
@@ -157,7 +163,7 @@ challenge = Challenge.create(name: "Challenge X", content: "Challenge content", 
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 28, activity: activity_8)
 challenge = Challenge.create(name: "Challenge X", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 29, activity: activity_8)
 
-file = URI.open('https://i.ytimg.com/an_webp/JNOXZumCXNM/mqdefault_6s.webp?du=3000&sqp=CM7iuPoF&rs=AOn4CLBd8VbtqCT0Pgfmlk9cGV1pnPnD6w')
+file = URI.open('https://i.ytimg.com/an_webp/JNOXZumCXNM/mqdefault_6s.webp?du=3000&sqp=CP7cvfoF&rs=AOn4CLDy0znHSzEVJAykaByHNZLkK9ZfUA')
 challenge = Challenge.create(name: "5 tips to get started!", description:"Watch the video and try to give a simple presentation in front of your friends or colleagues to practice", content: "https://www.youtube.com/embed/JNOXZumCXNM", source: "Youtube", source_type: "Video", duration: 8, position: 0, activity: activity_4)
 challenge.photo.attach(io: file, filename: 'speaking.png', content_type: 'image/png')
 challenge = Challenge.create(name: "Challenge 2", content: "Challenge content", source: "Youtube", source_type: "Video", duration: 4, position: 1, activity: activity_4)
