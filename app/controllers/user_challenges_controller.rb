@@ -13,7 +13,7 @@ class UserChallengesController < ApplicationController
 
   def dashboard
     @user_challenges = UserChallenge.all
-    @plannings = Planning.all
+    @plannings = current_user.plannings
     #binding.pry
   end
 
