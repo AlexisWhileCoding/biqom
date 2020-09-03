@@ -2,7 +2,7 @@
  <!--<h1 class="typewrite">.</h1>-->
 <div class="row">
   <div id="question" class="col-1" data-toggle="modal" data-target="#exampleModal">
-    <%= image_tag "question.png", class: "logo", id: "two"%>
+    <%= image_tag "question.png", class: "logo, pointer", id: "six"%>
   </div>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document" id="dialog">
@@ -62,7 +62,7 @@
   <div class="content col-10">
     <div class="cards">
       <% @activities.each do |activity| %>
-        <div class="card" data-toggle="modal" data-target="#<%= "activity-#{activity.id}" %>" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path activity.photo.key, height: 300, width: 400, crop: :fill %>')">
+        <div class="card pointer" data-toggle="modal" data-target="#<%= "activity-#{activity.id}" %>" style="background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path activity.photo.key, height: 300, width: 400, crop: :fill %>')">
           <%= activity.name%>
           </div>
             <!-- Modal -->
