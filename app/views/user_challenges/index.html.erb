@@ -9,9 +9,9 @@
             <h4><%= user_challenge.challenge.name %></h4>
             <h6><%= user_challenge.challenge.description %></h6>
             <% if user_challenge.status == "Completed" %>
-              <%= user_challenge.status %>
+              <h6 class="status"><%= user_challenge.status %></h6>
             <% else  %>
-              <h6>Not completed, let's do it!</h6>
+              <h6 class="status">Not completed, let's do it!</h6>
             <% end %>
           </div>
         <div>
