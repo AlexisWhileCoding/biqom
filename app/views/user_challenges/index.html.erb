@@ -3,7 +3,7 @@
 <% if @user_challenges.any? %>
   <div class="cards-div w-75" >
   <% @user_challenges.each do |user_challenge| %>
-      <div class="card-product-challenges mb-3"  data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
+      <div class="card-product-challenges mb-3 pointer"  data-toggle="modal" data-target="#<%= "activity-#{user_challenge.id}" %>">
         <%= cl_image_tag user_challenge.challenge.photo.key, height: 200, width: 200%>
           <div style="min-height: calc(65vh - 250px);" class="card-product-infos card-challenges" >
             <h4><%= user_challenge.challenge.name %></h4>
