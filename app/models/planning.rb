@@ -2,6 +2,8 @@ class Planning < ApplicationRecord
   belongs_to :user
   belongs_to :activity
 
+  validates :activity, uniqueness: { scope: :user }
+
   has_many :user_challenges, dependent: :destroy
 
   after_create :create_user_challenges
