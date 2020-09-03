@@ -111,7 +111,7 @@ h1{
   font-size: 28px;
   color: rgb(255, 42, 42);
   text-shadow: none;
-  padding: 20px;
+  padding-bottom: 30px;
   border-bottom: 1px solid #E5E5E5;
 
 }
@@ -221,3 +221,13 @@ color: #E5E5E5
 .pointer{
   cursor: pointer;
 }
+
+.description{
+  height: 130px;
+}
+
+.main {
+  min-height: calc(85vh - 126px);
+  padding-top: 40px;
+}
+

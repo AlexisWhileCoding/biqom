@@ -6,7 +6,9 @@
         <%= cl_image_tag planning.activity.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
           <h3><%= planning.activity.name %></h3>
+          <div class="description">
           <h6><%= planning.activity.description %></h6>
+          </div>
           <div class="status">
            <% if planning.start_date.nil? %>
             <h5>Not planned yet</h5>

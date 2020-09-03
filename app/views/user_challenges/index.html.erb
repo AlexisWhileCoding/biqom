@@ -7,7 +7,9 @@
         <%= cl_image_tag user_challenge.challenge.photo.key, height: 200, width: 200%>
           <div style="min-height: calc(65vh - 250px);" class="card-product-infos card-challenges" >
             <h4><%= user_challenge.challenge.name %></h4>
-            <h6><%= user_challenge.challenge.description %></h6>
+            <div class="description">
+              <h6><%= user_challenge.challenge.description %></h6>
+            </div>
             <% if user_challenge.status == "Completed" %>
               <h6 class="status"><%= user_challenge.status %></h6>
             <% else  %>
